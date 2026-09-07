@@ -1,0 +1,73 @@
+/* ============================================================
+    EJERCICIO 2 — SELECTORES Y ESPECIFICIDAD
+   ============================================================
+   La Pizzería La Napolitana dejó la pizarra de tiza y ahora
+   tiene su menú en una web. El HTML ya está listo: tu trabajo
+   es que cada parte se vea distinta usando el selector correcto.
+
+   Teoría: sección 3 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ───
+   El selector universal * toca TODOS los elementos: es el que
+   tiene la especificidad más baja de todas. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #faf3e0;
+  padding: 24px;
+}
+
+/* ============================================================
+   TODO 1 — Selector de ETIQUETA
+   Todos los <p> de la página deberían verse con:
+   - color: #5c4a3a
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Selector de CLASE
+   Los párrafos (y listas) con clase .destacado deben tener:
+   - color: #2a9d8f
+   - font-weight: bold
+   Pregunta: esta regla también usa `color`, igual que el
+   TODO 1. ¿Quién gana y por qué?
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — Selector de ID
+   El título #titulo-principal:
+   - color: #d62828
+   - text-align: center
+   El aviso #aviso:
+   - background-color: #ffd166
+   - color: #7a4b00
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — Selectores AGRUPADOS
+   Con UNA sola regla (separando con coma), dale a h1 y h2:
+   - font-family: Georgia, "Times New Roman", serif
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — Selectores ANIDADOS
+   Solo los <li> que están DENTRO de .menu deben tener:
+   - font-size: 18px
+   Después probá escribir la regla solo con li (sin .menu) y
+   mirá la página. ¿Cambió algo? ¿Por qué?
+   ============================================================ */
+
+/* ============================================================
+    DESAFÍO DE ESPECIFICIDAD — respondé antes de mirar el
+   navegador. En la página hay varios <p>:
+   1. ¿De qué color queda el <p> con clase .destacado?
+   2. ¿De qué color queda el <p> con id #aviso?
+   3. ¿Y los <p> que no tienen clase ni id?
+   Escribí tu respuesta acá abajo, después abrí el navegador
+   y verificá. ¿Coincidió con la cuenta de puntos de la teoría?
+   ============================================================ */

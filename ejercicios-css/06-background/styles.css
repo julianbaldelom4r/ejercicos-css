@@ -1,0 +1,79 @@
+/* ============================================================
+    EJERCICIO 6 — BACKGROUND
+   ============================================================
+   El blog de viajes "Rutas del Sur" necesita una portada con
+   personalidad: una imagen de fondo en el encabezado y una
+   franja con gradiente para la frase del cierre.
+
+   Nota: la imagen se carga desde internet (picsum.photos).
+   Si no tenés conexión, reemplazá la url() por un gradiente:
+   linear-gradient(#23423d, #4a7c6f)
+
+   Teoría: sección 4.7 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f4f1ea;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.post {
+  background-color: #ffffff;
+  border: 1px solid #e0d9cc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* ============================================================
+   TODO 1 — El hero con imagen de fondo
+   A .hero dale:
+   - height: 320px
+   - background-color: #23423d       color de respaldo
+   - background-image: url("https://picsum.photos/1200/500")
+   - background-size: cover
+   - background-position: center
+   - background-repeat: no-repeat
+   Si la imagen tarda en cargar, ¿para qué sirve el
+   background-color de respaldo?
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Texto del hero
+   A .hero dale también:
+   - color: #ffffff
+   - text-align: center
+   ¿El texto se lee bien sobre la imagen? Probá cambiar el
+   background-size a contain y mirá la diferencia con cover.
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — Frase con gradiente
+   A .frase dale:
+   - background: linear-gradient(90deg, #0d3b66, #1d7a8c)
+   - color: #ffffff
+   - padding: 24px
+   - text-align: center
+   Un gradiente es una "imagen" que genera CSS: por eso va en
+   background-image (o en el shorthand background).
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — Experimento con attachment
+   Sumale a .hero:
+   - background-attachment: fixed
+   Scrolleá la página: ¿qué le pasa a la imagen del hero?
+   ============================================================ */

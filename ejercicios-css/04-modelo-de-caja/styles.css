@@ -1,0 +1,83 @@
+/* ============================================================
+    EJERCICIO 4 — MODELO DE CAJA
+   ============================================================
+   El Club Atlético Belgrano quiere digitalizar el carnet de
+   sus socios. Cada elemento es una caja: contenido, padding,
+   borde y margen. Tu trabajo es armar el carnet con esas capas.
+
+   Teoría: sección 4.4 a 4.6 y sección 6 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f0f4f8;
+  padding: 24px;
+}
+
+/* ============================================================
+   TODO 1 — El carnet
+   A .carnet dale:
+   - background-color: #ffffff
+   - width: 340px
+   - margin: 24px auto    el auto a los costados lo centra
+   - padding: 20px
+   - border: 3px solid #1d3557
+   - border-radius: 12px
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — La sombra
+   Sumale a .carnet (podés escribir otra regla .carnet o
+   completar la anterior):
+   - box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3)
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — Fila del encabezado
+   A .fila-encabezado dale:
+   - margin-bottom: 16px
+   - padding-bottom: 12px
+   - border-bottom: 2px dashed #1d3557
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — El escudo
+   A .escudo dale:
+   - font-size: 36px
+   - background-color: #e8eef7
+   - border: 2px solid #1d3557
+   - border-radius: 50%    el círculo perfecto
+   - padding: 8px
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — Beneficios
+   A .beneficios li dale:
+   - margin-bottom: 8px
+   ============================================================ */
+
+/* ============================================================
+   TODO 6 — Vencimiento
+   A .vencimiento dale:
+   - background-color: #1d3557
+   - color: #ffffff
+   - text-align: center
+   - padding: 8px
+   - border-radius: 6px
+   ============================================================ */
+
+/* ============================================================
+    EXPERIMENTO DE BOX-SIZING
+   El reset usa box-sizing: border-box: el width incluye el
+   padding y el borde. Probá cambiar el padding de .carnet de
+   20px a 40px: ¿el carnet crece o sigue midiendo 340px?
+   Después sacá el box-sizing del reset y probá de nuevo.
+   ¿Qué pasó ahora?
+   ============================================================ */

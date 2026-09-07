@@ -1,0 +1,40 @@
+/* ============================================================
+    EJERCICIO 1 — FORMAS DE APLICAR CSS
+   ============================================================
+   El Cine Orión renovó la página y quiere que la cartelera se
+   vea como corresponde. Vas a estilarla de las tres formas que
+   existen:
+
+   TODO 1  CSS EN LÍNEA  (en index.html, atributo style del h1)
+   TODO 2  CSS INTERNO   (en index.html, etiqueta <style>)
+   TODO 3  CSS EXTERNO   (acá, en este archivo)
+
+    Es el único ejercicio donde también se edita el HTML.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #10141a;
+  padding: 24px;
+}
+
+.cartel {
+  border: 2px dashed #444;
+  padding: 16px;
+}
+
+/* ============================================================
+   TODO 3 — CSS EXTERNO
+   Este archivo está enlazado desde el <head> con la etiqueta
+   <link>. Escribí una regla para la clase .funcion-externa con:
+   - color: #8ecae6
+   - font-size: 20px
+   - text-align: center
+   ============================================================ */

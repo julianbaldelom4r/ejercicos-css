@@ -1,0 +1,131 @@
+/* ============================================================
+    EJERCICIO 9 — PSEUDOCLASES Y PSEUDOELEMENTOS
+   ============================================================
+   El Club de Lectura El Faro quiere que su página responda al
+   visitante: links que reaccionan al mouse, una lista con
+   efecto cebra, un input que avisa cuando está activo y
+   detalles de estilo sin tocar el HTML.
+
+   Teoría: sección 8 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f4f7f5;
+}
+
+header {
+  padding: 24px 24px 0;
+}
+
+.menu {
+  padding: 12px 24px;
+  background-color: #dce8e2;
+}
+
+main {
+  padding: 0 24px 24px;
+}
+
+section {
+  margin-top: 24px;
+}
+
+.lista {
+  padding-left: 24px;
+}
+
+form {
+  margin-top: 8px;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+/* ============================================================
+   TODO 1 — Link bajo el mouse
+   Con la pseudoclase :hover:
+   .menu a:hover
+   - color: #0d6e4f
+   - font-weight: bold
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Efecto cebra
+   Las posiciones pares de la lista (sin tocar el HTML):
+   .lista li:nth-child(even)
+   - background-color: #dce8e2
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — Hover sobre la lista
+   .lista li:hover
+   - background-color: #b8d8c4
+   Pregunta: al pasar el mouse sobre un item par, ¿gana la
+   cebra (TODO 2) o el hover (TODO 3)? ¿De qué depende?
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — La más votada
+   El último item de la lista:
+   .lista li:last-child
+   - font-weight: bold
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — Input activo
+   Cuando el input recibe el foco (hacé clic adentro):
+   input:focus
+   - border: 2px solid #0d6e4f
+   - background-color: #fffbe6
+   ============================================================ */
+
+/* ============================================================
+   TODO 6 — Botón reactivo
+   button:hover
+   - background-color: #0d6e4f
+   - color: #ffffff
+   ============================================================ */
+
+/* ============================================================
+   TODO 7 — Marca antes de cada libro
+   Los pseudoelementos insertan contenido desde el CSS.
+   .lista li::before
+   - content: "» "
+   Ojo: content SOLO funciona en ::before y ::after.
+   ============================================================ */
+
+/* ============================================================
+   TODO 8 — Capital del párrafo
+   .texto::first-letter
+   - font-size: 3em
+   - color: #0d6e4f
+   - font-weight: bold
+   ============================================================ */
+
+/* ============================================================
+   TODO 9 — Texto después de cada link
+   .menu a::after
+   - content: " (link)"
+   ============================================================ */
+
+/* ============================================================
+    PARA PENSAR
+   ¿Cuál es la diferencia entre una pseudoclase (un solo :)
+   y un pseudoelemento (dos :)? Poné un ejemplo de cada una
+   que hayas usado en este ejercicio.
+   ============================================================ */

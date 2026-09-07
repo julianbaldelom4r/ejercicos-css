@@ -1,0 +1,150 @@
+/* ============================================================
+    EJERCICIO 13 — ANIMACIONES Y TRANSICIONES
+   ============================================================
+   Aurora Music quiere que la app se sienta viva: botones que
+   reaccionan al mouse, una alerta que aparece suave, una
+   campana que suena (bueno, que se sacude) y un texto que
+   pulsa mientras carga.
+
+   Teoría: sección 12 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #14121f;
+  color: #eae6f2;
+  padding: 24px;
+}
+
+.app-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* display: inline-block: un span no acepta transform ni
+   animation sin esto. No lo saques. */
+.campana {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffd166;
+  display: inline-block;
+}
+
+main {
+  margin-top: 24px;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+.botones {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: 1px solid #4b4463;
+  background-color: #241f38;
+  color: #eae6f2;
+  border-radius: 8px;
+}
+
+.alerta {
+  background-color: #241f38;
+  border: 1px solid #4b4463;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.cargando {
+  margin-top: 16px;
+  color: #9b93b5;
+}
+
+/* ============================================================
+   TODO 1 — Transición en los botones
+   A .btn dale:
+   - transition: all 0.3s ease
+   Probá: sacá esta línea, probá el hover del TODO 2, ponela
+   de vuelta. ¿Cuál es la diferencia?
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Botón que crece
+   A .btn:hover dale:
+   - transform: scale(1.06)
+   - background-color: #372f55
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — El botón principal
+   A .btn-primario dale:
+   - background-color: #7c5cff
+   - border-color: #7c5cff
+   - color: #ffffff
+   Y a .btn-primario:hover:
+   - box-shadow: 0 6px 20px rgba(124, 92, 255, 0.5)
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — Alerta que aparece
+   Primero definí la animación:
+   @keyframes aparecer {
+     from { opacity: 0; transform: translateY(12px); }
+     to   { opacity: 1; transform: translateY(0); }
+   }
+   Y después aplicala a .alerta:
+   - animation: aparecer 0.6s ease-out
+   Recargá la página: la alerta entra deslizándose.
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — Campana que se sacude
+   Definí esta animación:
+   @keyframes sacudir {
+     0%   { transform: rotate(0); }
+     25%  { transform: rotate(-15deg); }
+     50%  { transform: rotate(15deg); }
+     75%  { transform: rotate(-10deg); }
+     100% { transform: rotate(0); }
+   }
+   Y aplicala solo cuando pasan el mouse:
+   .campana:hover { animation: sacudir 0.4s ease; }
+   ============================================================ */
+
+/* ============================================================
+   TODO 6 — Texto que pulsa
+   Definí la animación:
+   @keyframes pulsar {
+     from { opacity: 0.3; }
+     to   { opacity: 1; }
+   }
+   Y aplicala a .cargando:
+   - animation: pulsar 1s ease-in-out infinite alternate
+   infinite = no termina nunca. alternate = cada vuelta va y
+   viene. Probá sacar el alternate: ¿qué cambia?
+   ============================================================ */
+
+/* ============================================================
+    PARA PENSAR
+   ¿Cuándo conviene transition y cuándo @keyframes? Poné un
+   ejemplo de cada uno de los que hiciste acá.
+   ============================================================ */

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-elementos</title>
+    <style>
+      .element::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border: 1px solid black;
+        display: inline-block;
+      }
+      .element::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border: 1px solid black;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo-elementos</h1>
+    <p>
+      los pseudo elementos representan partes de un elementos, estas partes
+      generalmente, salen del flujo de elementos.
+    </p>
+    <p>
+      (esto es un introduccion, para ver mas en detalle, primero tenemos que ver
+      el posicionamiento)
+    </p>
+    <p class="element">este es el sujeto de prueba</p>
+  </body>
+</html>

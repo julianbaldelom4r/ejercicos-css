@@ -1,0 +1,77 @@
+/* ============================================================
+    EJERCICIO 5 — TAMAÑOS Y UNIDADES
+   ============================================================
+   La productora Ritmo Sur quiere el banner de su festival.
+   Acá no alcanza con poner números: hay que elegir la unidad
+   correcta (px, %, em, rem, vw, vh) para que el diseño se
+   acomode a cualquier pantalla.
+
+   Teoría: sección 4.6 (Ancho y Alto) de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f6f5f0;
+}
+
+/* ============================================================
+   TODO 1 — El banner
+   A .banner dale:
+   - width: 100%
+   - height: 40vh           40% de la altura de la ventana
+   - background-color: #22223b
+   - color: #f2e9e4
+   - text-align: center
+   Probá después cambiar 40vh por 400px y achicar la ventana:
+   ¿cuál de los dos se adapta mejor?
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Título del festival
+   A .banner h1 dale:
+   - font-size: 4rem
+   rem es relativo al tamaño de fuente del html. Probá cambiar
+   4rem por 4vw y mover el ancho de la ventana. ¿Qué diferencia
+   hay entre rem y vw?
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — Contenido centrado
+   A .contenido dale:
+   - max-width: 700px
+   - margin: 0 auto         arriba/abajo 0, izq/der auto (centra)
+   - padding: 24px
+   Achicá la ventana: ¿por qué max-width en vez de width?
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — Etiqueta
+   A .etiqueta dale:
+   - font-size: 1.5em
+   em es relativo al tamaño de fuente del ELEMENTO PADRE.
+   Cambiale el font-size al .banner y mirá cómo se mueve solo.
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — El póster
+   A .poster dale:
+   - font-size: 80px
+   - text-align: center
+   - min-height: 160px
+   - max-width: 300px
+   - margin: 24px auto
+   - background-color: #e8e2d9
+   ============================================================ */
+
+/* ============================================================
+    PARA PENSAR
+   En tu equipo todo puede verse bien, pero ¿cómo verificarías
+   que el banner también se ve bien en un celular?
+   ============================================================ */

@@ -1,0 +1,123 @@
+/* ============================================================
+    EJERCICIO 10 — FLEXBOX
+   ============================================================
+   La Parrilla del Sur necesita: una barra con logo a la
+   izquierda y links a la derecha, una fila de platos que se
+   acomoden solos, y un pie con los datos repartidos.
+   Todo eso es Flexbox.
+
+   Teoría: sección 9 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #fdf8f2;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.barra a {
+  color: #f5e6d3;
+}
+
+.titulo {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.emoji {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.plato:nth-child(1) .emoji { background-color: #dc2626; }
+.plato:nth-child(2) .emoji { background-color: #ea580c; }
+.plato:nth-child(3) .emoji { background-color: #16a34a; }
+.plato:nth-child(4) .emoji { background-color: #2563eb; }
+.plato:nth-child(5) .emoji { background-color: #ca8a04; }
+.plato:nth-child(6) .emoji { background-color: #7c3aed; }
+
+.plato h2 {
+  font-size: 18px;
+}
+
+.plato p {
+  color: #777;
+}
+
+/* ============================================================
+   TODO 1 — La barra
+   A .barra dale:
+   - display: flex
+   - justify-content: space-between   logo de un lado, links del otro
+   - align-items: center
+   - padding: 12px 24px
+   - background-color: #292018
+   - color: #f5e6d3
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Los links
+   A .links dale:
+   - display: flex
+   - gap: 16px
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — La fila de platos
+   A .platos dale:
+   - display: flex
+   - flex-wrap: wrap         si no entran, bajan a la fila siguiente
+   - justify-content: center
+   - gap: 16px
+   - padding: 24px
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — Cada tarjeta, de arriba hacia abajo
+   A .plato dale:
+   - display: flex
+   - flex-direction: column
+   - align-items: center
+   - background-color: #ffffff
+   - border: 1px solid #e5d5c5
+   - border-radius: 8px
+   - padding: 16px
+   - width: 200px
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — La tarjeta vip
+   A .destacado dale:
+   - align-self: center
+   Probá también flex-start y flex-end: ¿qué cambia en su
+   altura respecto de las tarjetas de su misma fila?
+   ============================================================ */
+
+/* ============================================================
+   TODO 6 — El pie repartido
+   A .pie dale:
+   - display: flex
+   - justify-content: space-around
+   - padding: 16px
+   - background-color: #292018
+   - color: #f5e6d3
+   ============================================================ */
+
+/* ============================================================
+    PARA EXPERIMENTAR
+   Cambiá el flex-direction de .platos a column y mirá qué
+   pasa. ¿Y si le sacás el flex-wrap? Probá también cambiar
+   justify-content por space-between y space-evenly.
+   ============================================================ */

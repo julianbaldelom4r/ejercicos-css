@@ -1,0 +1,108 @@
+/* ============================================================
+    EJERCICIO 12 — MEDIA QUERIES
+   ============================================================
+   Café Aroma quiere que su página se vea bien en la compu Y
+   en el celular. Las media queries aplican estilos solo cuando
+   se cumple una condición, por ejemplo el ancho de pantalla.
+
+   Estrategia: primero escribís el diseño de escritorio y
+   después ajustás con @media (max-width: ...).
+
+   Teoría: sección 11 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #faf6f1;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #6f4e37, #a97c50);
+  color: #ffffff;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.emoji {
+  height: 70px;
+  border-radius: 6px;
+}
+
+.tarjeta:nth-child(1) .emoji { background: linear-gradient(135deg, #b45309, #78350f); }
+.tarjeta:nth-child(2) .emoji { background: linear-gradient(135deg, #fbbf24, #d97706); }
+.tarjeta:nth-child(3) .emoji { background: linear-gradient(135deg, #f9a8d4, #db2777); }
+.tarjeta:nth-child(4) .emoji { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+
+.tarjeta {
+  background-color: #ffffff;
+  border: 1px solid #e8ddd0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.tarjeta h3 {
+  font-size: 16px;
+}
+
+.tarjeta p {
+  color: #777;
+}
+
+.nota {
+  color: #777;
+  padding: 0 24px;
+}
+
+/* ============================================================
+   TODO 1 — Estilos base (escritorio)
+   A .barra dale:
+   - display: flex
+   - justify-content: space-between
+   - align-items: center
+   - padding: 12px 24px
+   - background-color: #3e2b23
+   - color: #ffffff
+   A .links dale: display: flex y gap: 16px
+   A .tarjetas dale:
+   - display: grid
+   - grid-template-columns: repeat(4, 1fr)
+   - gap: 16px
+   - padding: 24px
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Tableta (hasta 900px)
+   Con una media query, cuando la pantalla mida MÁXIMO 900px:
+   @media (max-width: 900px) { ... }
+   - .tarjetas  grid-template-columns: repeat(2, 1fr)
+   - .hero h1  font-size: 28px
+   Abrí el navegador y achicá la ventana para verlo funcionar.
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — Celular (hasta 600px)
+   Otra media query, ahora con max-width: 600px:
+   - .tarjetas  grid-template-columns: 1fr
+   - .barra  flex-direction: column y gap: 8px
+   - .nota  text-align: center
+   ============================================================ */
+
+/* ============================================================
+    PARA PENSAR
+   ¿Por qué la media query de 600px tiene que ir DESPUÉS de la
+   de 900px en el archivo? (Pista: cuando las dos condiciones
+   se cumplen a la vez, ¿qué gana según la cascada?)
+   ============================================================ */

@@ -1,0 +1,140 @@
+/* ============================================================
+    EJERCICIO 8 — POSICIONAMIENTO
+   ============================================================
+   Gadgets Ya quiere una barra fija arriba, un cartel pegajoso
+   de ofertas, etiquetas de descuento flotando sobre cada
+   producto y un botón para volver arriba. Todo eso es
+   position.
+
+   Teoría: sección 7 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ───
+   (El display: flex lo vas a entender en el ejercicio 10.
+   Por ahora es decoración: no lo toques.) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f2f2f7;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #1d1d2b;
+  color: #ffffff;
+}
+
+.barra a {
+  color: #ffd166;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0 24px 24px;
+}
+
+.producto {
+  width: 220px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 16px;
+}
+
+.foto {
+  height: 90px;
+  border-radius: 6px;
+}
+
+.producto:nth-child(1) .foto { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+.producto:nth-child(2) .foto { background: linear-gradient(135deg, #34d399, #059669); }
+.producto:nth-child(3) .foto { background: linear-gradient(135deg, #f87171, #dc2626); }
+.producto:nth-child(4) .foto { background: linear-gradient(135deg, #fbbf24, #d97706); }
+.producto:nth-child(5) .foto { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
+.producto:nth-child(6) .foto { background: linear-gradient(135deg, #f472b6, #db2777); }
+
+.info {
+  padding: 24px;
+  color: #666;
+}
+
+.info p {
+  margin-bottom: 8px;
+}
+
+/* ============================================================
+   TODO 1 — Barra fija
+   A .barra sumale:
+   - position: fixed
+   - top: 0
+   - left: 0
+   - width: 100%
+   Mirá la página: la barra queda fija, pero ¿qué pasa con el
+   contenido que quedó escondido detrás de ella?
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Compensar la barra
+   Al body sumale:
+   - padding-top: 64px
+   Un elemento fixed sale del flujo normal: hay que hacerle
+   lugar a mano.
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — El índice pegajoso
+   A .indice dale:
+   - position: sticky
+   - top: 64px
+   - background-color: #ffd166
+   - padding: 8px 24px
+   Scrolleá: se comporta como relative hasta que toca el tope,
+   y ahí se queda pegado (debajo de la barra).
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — Ancla para la etiqueta
+   A .producto sumale:
+   - position: relative
+   No se mueve de lugar: sirve de REFERENCIA para el hijo con
+   position: absolute del TODO 5.
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — Etiqueta de oferta flotante
+   A .etiqueta-oferta dale:
+   - position: absolute
+   - top: 8px
+   - right: 8px
+   - background-color: #e63946
+   - color: #ffffff
+   - padding: 4px 8px
+   - border-radius: 4px
+   Queda DENTRO del producto pero SIN ocupar lugar en el flujo.
+   Probá: si le sacás el position: relative a .producto
+   (TODO 4), ¿respecto de quién se posiciona la etiqueta?
+   ============================================================ */
+
+/* ============================================================
+   TODO 6 — Botón volver arriba
+   A .subir dale:
+   - position: fixed
+   - bottom: 16px
+   - right: 16px
+   - background-color: #1d1d2b
+   - color: #ffffff
+   - padding: 10px 14px
+   - border-radius: 24px
+   - z-index: 10
+   Scrolleá y fijate qué pasa si dos elementos posicionados se
+   superponen: ¿quién queda arriba? ¿Qué controla el z-index?
+   ============================================================ */

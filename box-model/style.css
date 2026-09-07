@@ -1,0 +1,47 @@
+.caja {
+  width: 70px;
+  height: 100px;
+  /*Abreviaciones(shorthands)*/
+  border: 2px solid black;
+  background-color: red;
+  margin: 0 30px;
+
+  position: relative;
+}
+
+.caja-1 {
+  background-color: green;
+  margin: -80px 0 0 45px;
+  /*z-index: 1;*/
+}
+.caja-2 {
+  background-color: blue;
+  margin: -75px 0 0 70px;
+}
+
+/*--------------------------------------*/
+.box {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 200px;
+  height: 200px;
+  background-color: orangered;
+  border: 2px solid black;
+  /*border-radius: 10px 0 10px 0; /*top-right-bottom-left*/
+  border-radius: 50%;
+  /*overflow: hidden;*/
+}
+
+.inner {
+  width: 60px;
+  background-color: greenyellow;
+  border: 1px solid white;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 75px;
+  border-radius: 50%;
+
+  box-shadow:
+    inset 7px 9px 17px -5px #000000a3,
+    inset 7px -30px 30px 4px red; /*ejex(px), ejey(px), difuminado(px), tamaño(px), color*/
+}

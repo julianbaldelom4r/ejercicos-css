@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      .conteiner {
+        background-color: aquamarine;
+        width: fit-content;
+        height: fit-content;
+        border: 1px solid black;
+
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .box {
+        background-color: chocolate;
+        width: 100px;
+        height: 100px;
+        border: 10px groove black;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.1s ease-in;
+      }
+
+      .box:hover {
+        background-color: darkkhaki;
+        border-color: red;
+      }
+
+      .box:nth-child(1),
+      .box:nth-child(3) {
+        background-color: blueviolet;
+      }
+
+      .wrapper {
+        width: 100%;
+        display: flex;
+      }
+
+      .b5 {
+        flex: 1 1 30vw;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cajas flexibles</h1>
+    <!-- <section class="conteiner">
+      <section class="wrapper"> 
+      <div class="box" style="font-size: 12px">caja1</div>
+      <div class="box" style="font-size: 12px">caja2</div>
+      </section>
+      
+      <section class="wrapper"> 
+      <div class="box" style="font-size: 12px">caja3</div>
+      <div class="box" style="font-size: 12px">caja4</div>
+      
+      </section> -->
+    <div class="conteiner">
+      <section class="wrapper">
+        <div class="box b1">caja1</div>
+        <div class="box b2">caja2</div>
+        <div class="box b3">caja3</div>
+      </section>
+
+      <section class="wrapper">
+        <div class="box b1">caja4</div>
+        <div class="box b5">caja5</div>
+        <div class="box b3">caja6</div>
+      </section>
+
+      <section class="wrapper">
+        <div class="box b1">caja7</div>
+        <div class="box b2">caja8</div>
+        <div class="box b3">caja9</div>
+      </section>
+    </div>
+  </body>
+</html>

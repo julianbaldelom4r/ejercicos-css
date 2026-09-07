@@ -1,0 +1,72 @@
+/* ============================================================
+    EJERCICIO 3 — TEXTO Y COLORES
+   ============================================================
+   La Cantina Doña Rosa necesita que su menú del día se vea
+   cálido y fácil de leer. El HTML ya está listo: tu trabajo es
+   darle color y tipografía a cada parte.
+
+   Teoría: sección 4 (4.1 a 4.3) de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 24px;
+}
+
+/* ============================================================
+   TODO 1 — Base de la página
+   Al body dale:
+   - background-color: #fff8f0
+   - font-family: Georgia, "Times New Roman", serif
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Encabezado
+   A .encabezado dale:
+   - background-color: #6d3b2b
+   - text-align: center
+   A su h1 (selector anidado: .encabezado h1):
+   - color: #fff8f0
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — Subtítulo
+   A .subtitulo dale:
+   - color: #e0c9a6
+   - font-size: 18px
+   Extra: probá también font-style: italic y mirá la diferencia.
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — Precios
+   A .precio dale:
+   - color: #2a9d8f
+   - font-weight: bold
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — Descripciones
+   A .descripcion dale:
+   - color: #8a7968
+   - font-size: 14px
+   ============================================================ */
+
+/* ============================================================
+   TODO 6 — Pie de página
+   A .pie dale:
+   - text-align: center
+   - color: #8a7968
+   ============================================================ */
+
+/* ============================================================
+    PARA PENSAR
+   Probá cambiar el font-family del body a system-ui, sans-serif.
+   ¿Qué cambió en toda la página? ¿Por qué una sola regla afectó
+   a todos los textos?
+   ============================================================ */

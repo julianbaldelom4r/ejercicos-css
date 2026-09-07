@@ -1,0 +1,17 @@
+body {
+  text-transform: capitalize;
+}
+h1 {
+  display: inline;
+  font-size: 1.3rem;
+}
+
+ul {
+  background-color: rgb(185, 77, 77);
+  list-style: upper-roman;
+}
+
+ol {
+  color: #fff;
+  background-color: rgb(44, 160, 44);
+}

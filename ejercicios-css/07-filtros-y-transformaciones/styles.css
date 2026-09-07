@@ -1,0 +1,101 @@
+/* ============================================================
+    EJERCICIO 7 — FILTROS Y TRANSFORMACIONES
+   ============================================================
+   El Estudio Foco armó la galería de su sitio y quiere que
+   las fotos se vean "en blanco y negro" hasta que el visitante
+   pase el mouse por encima, más algunos detalles de diseño.
+
+   Teoría: sección 5 de teoria.md.
+   ============================================================ */
+
+/* ─── Reset y base — ya está hecho, no lo modifiques ───
+   (La transition que ves en .cuadro hace que el hover sea
+   suave. La estudiamos en el ejercicio 13: por ahora dejala.) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #efedea;
+}
+
+.cabecera {
+  padding: 24px;
+  text-align: center;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 24px 24px;
+}
+
+.cuadro {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  transition: transform 0.3s ease;
+}
+
+.foto {
+  height: 100px;
+  border-radius: 6px;
+}
+
+/* Cada cuadro tiene su propio color de fondo. */
+.cuadro:nth-child(1) .foto { background: linear-gradient(135deg, #f4a261, #e76f51); }
+.cuadro:nth-child(2) .foto { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+.cuadro:nth-child(3) .foto { background: linear-gradient(135deg, #fde047, #f59e0b); }
+.cuadro:nth-child(4) .foto { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
+.cuadro:nth-child(5) .foto { background: linear-gradient(135deg, #34d399, #059669); }
+.cuadro:nth-child(6) .foto { background: linear-gradient(135deg, #f472b6, #db2777); }
+
+figcaption {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ============================================================
+   TODO 1 — Fotos en blanco y negro
+   A .foto dale:
+   - filter: grayscale(100%)
+   ============================================================ */
+
+/* ============================================================
+   TODO 2 — Color al pasar el mouse
+   Con selector anidado + pseudoclase: .cuadro:hover .foto
+   - filter: none
+   Pasá el mouse por los cuadros: cada foto recupera el color.
+   ============================================================ */
+
+/* ============================================================
+   TODO 3 — El cuadro crece
+   A .cuadro:hover sumale:
+   - transform: scale(1.05)
+   (La transition del base hace el resto: suavidad.)
+   ============================================================ */
+
+/* ============================================================
+   TODO 4 — El sello inclinado
+   A .sello dale:
+   - transform: rotate(-4deg)
+   ============================================================ */
+
+/* ============================================================
+   TODO 5 — La obra destacada
+   A .destacada .foto dale:
+   - filter: saturate(200%) brightness(1.1)
+   Fijate: se pueden combinar varios filtros en una sola línea.
+   ============================================================ */
+
+/* ============================================================
+    PARA EXPERIMENTAR
+   Probá sobre .foto: blur(3px), sepia(80%), hue-rotate(90deg)
+   y el transform translate(10px, -5px). ¿Qué hace cada uno?
+   ============================================================ */
