@@ -24,10 +24,14 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — Selector de ETIQUETA
+   TODO 1 ☑️— Selector de ETIQUETA
    Todos los <p> de la página deberían verse con:
    - color: #5c4a3a
    ============================================================ */
+
+p {
+  color: #5c4a3a;
+}
 
 /* ============================================================
    TODO 2 — Selector de CLASE
@@ -36,10 +40,15 @@ body {
    - font-weight: bold
    Pregunta: esta regla también usa `color`, igual que el
    TODO 1. ¿Quién gana y por qué?
+   RTA: gana la clase porque tiene mayor especificadad
    ============================================================ */
+.destacado {
+  color: #2a9d8f;
+  font-weight: bold;
+}
 
 /* ============================================================
-   TODO 3 — Selector de ID
+   TODO 3☑️ — Selector de ID
    El título #titulo-principal:
    - color: #d62828
    - text-align: center
@@ -47,20 +56,36 @@ body {
    - background-color: #ffd166
    - color: #7a4b00
    ============================================================ */
+#titulo-principal {
+  color: #d62828;
+  text-align: center;
+}
+
+#aviso {
+  background-color: #ffd166;
+  color: #7a4b00;
+}
 
 /* ============================================================
-   TODO 4 — Selectores AGRUPADOS
+   TODO 4 ☑️— Selectores AGRUPADOS
    Con UNA sola regla (separando con coma), dale a h1 y h2:
    - font-family: Georgia, "Times New Roman", serif
    ============================================================ */
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
 
 /* ============================================================
-   TODO 5 — Selectores ANIDADOS
+   TODO 5 ☑️— Selectores ANIDADOS
    Solo los <li> que están DENTRO de .menu deben tener:
    - font-size: 18px
    Después probá escribir la regla solo con li (sin .menu) y
    mirá la página. ¿Cambió algo? ¿Por qué?
    ============================================================ */
+.menu li {
+  font-size: 18px;
+}
 
 /* ============================================================
     DESAFÍO DE ESPECIFICIDAD — respondé antes de mirar el
@@ -70,4 +95,6 @@ body {
    3. ¿Y los <p> que no tienen clase ni id?
    Escribí tu respuesta acá abajo, después abrí el navegador
    y verificá. ¿Coincidió con la cuenta de puntos de la teoría?
-   ============================================================ */
+   ============================================================ 
+   RTA: 1-celeste. 2-marron. 3-color por defecto negro
+   */
