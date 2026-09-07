@@ -20,53 +20,79 @@ main {
 }
 
 /* ============================================================
-   TODO 1 — Base de la página
+   TODO 1☑️ — Base de la página
    Al body dale:
    - background-color: #fff8f0
    - font-family: Georgia, "Times New Roman", serif
    ============================================================ */
-
+body {
+  background-color: #fff8f0;
+  font-family: Georgia, "Times New Roman", serif;
+}
 /* ============================================================
-   TODO 2 — Encabezado
+   TODO 2 ☑️— Encabezado
    A .encabezado dale:
    - background-color: #6d3b2b
    - text-align: center
    A su h1 (selector anidado: .encabezado h1):
    - color: #fff8f0
    ============================================================ */
+.encabezado {
+  background-color: #6d3b2b;
+  text-align: center;
+}
 
+.encabezado h1 {
+  color: #fff8f0;
+}
 /* ============================================================
-   TODO 3 — Subtítulo
+   TODO 3 ☑️— Subtítulo
    A .subtitulo dale:
    - color: #e0c9a6
    - font-size: 18px
    Extra: probá también font-style: italic y mirá la diferencia.
    ============================================================ */
 
+.subtitulo {
+  color: #e0c9a6;
+  font-size: 18px;
+  font-style: italic;
+}
+
 /* ============================================================
-   TODO 4 — Precios
+   TODO 4☑️ — Precios
    A .precio dale:
    - color: #2a9d8f
    - font-weight: bold
    ============================================================ */
-
+.precio {
+  color: #2a9d8f;
+  font-weight: bold;
+}
 /* ============================================================
-   TODO 5 — Descripciones
+   TODO 5 ☑️— Descripciones
    A .descripcion dale:
    - color: #8a7968
    - font-size: 14px
    ============================================================ */
-
+.descripcion {
+  color: #8a7968;
+  font-size: 14px;
+}
 /* ============================================================
-   TODO 6 — Pie de página
+   TODO 6 ☑️— Pie de página
    A .pie dale:
    - text-align: center
    - color: #8a7968
    ============================================================ */
-
+.pie {
+  text-align: center;
+  color: #8a7968;
+}
 /* ============================================================
     PARA PENSAR
    Probá cambiar el font-family del body a system-ui, sans-serif.
    ¿Qué cambió en toda la página? ¿Por qué una sola regla afectó
    a todos los textos?
+   RTA: el body seria el padre de todos. porque los elementos estan detro de el
    ============================================================ */
