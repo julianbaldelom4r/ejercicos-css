@@ -39,7 +39,7 @@ main {
 }
 
 /* ============================================================
-   TODO 1 — El hero con imagen de fondo
+   TODO 1 ☑️— El hero con imagen de fondo
    A .hero dale:
    - height: 320px
    - background-color: #23423d       color de respaldo
@@ -62,7 +62,7 @@ main {
   background-repeat: no-repeat;
 }
 /* ============================================================
-   TODO 2 — Texto del hero
+   TODO 2 ☑️— Texto del hero
    A .hero dale también:
    - color: #ffffff
    - text-align: center
@@ -83,7 +83,7 @@ main {
   text-shadow: 0px 0px 5px #000;
 }
 /* ============================================================
-   TODO 3 — Frase con gradiente
+   TODO 3 ☑️— Frase con gradiente
    A .frase dale:
    - background: linear-gradient(90deg, #0d3b66, #1d7a8c)
    - color: #ffffff
@@ -101,7 +101,7 @@ main {
 }
 
 /* ============================================================
-   TODO 4 — Experimento con attachment
+   TODO 4 ☑️— Experimento con attachment
    Sumale a .hero:
    - background-attachment: fixed
    Scrolleá la página: ¿qué le pasa a la imagen del hero?
