@@ -49,8 +49,18 @@ main {
    - background-repeat: no-repeat
    Si la imagen tarda en cargar, ¿para qué sirve el
    background-color de respaldo?
-   ============================================================ */
-
+   ============================================================ 
+   hero ui
+   cover cubra toda la pantalla
+   */
+.hero {
+  height: 320px;
+  background-color: #23423d;
+  background-image: url("https://images.unsplash.com/photo-1637580980556-085dee659c7e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGF0YWdvbmlhJTIwYXJnZW50aW5hfGVufDB8fDB8fHww");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* ============================================================
    TODO 2 — Texto del hero
    A .hero dale también:
@@ -58,8 +68,20 @@ main {
    - text-align: center
    ¿El texto se lee bien sobre la imagen? Probá cambiar el
    background-size a contain y mirá la diferencia con cover.
-   ============================================================ */
-
+   ============================================================ 
+   rta: el texto nose aprecia bien. En este caso dos colores desfavorables, aplicamos la text-shadown para resaltarlo mas.
+   cover: cubre toda la pantalla
+   contain: la imagen no tiene zoom y se muestra el fondo al agrandarse mas
+   */
+.hero {
+  color: #ffffff;
+  text-align: center;
+  background-attachment: fixed;
+}
+.hero p,
+.hero h1 {
+  text-shadow: 0px 0px 5px #000;
+}
 /* ============================================================
    TODO 3 — Frase con gradiente
    A .frase dale:
@@ -70,6 +92,13 @@ main {
    Un gradiente es una "imagen" que genera CSS: por eso va en
    background-image (o en el shorthand background).
    ============================================================ */
+.frase {
+  background: linear-gradient(90deg, #0d3b66, #1d7a8c);
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+  font-style: italic;
+}
 
 /* ============================================================
    TODO 4 — Experimento con attachment
