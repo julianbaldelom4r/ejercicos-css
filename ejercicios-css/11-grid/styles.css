@@ -31,12 +31,27 @@ body {
   border-radius: 6px;
 }
 
-.obra:nth-child(1) .lienzo { background: linear-gradient(135deg, #f59e0b, #ef4444); }
-.obra:nth-child(2) .lienzo { background: linear-gradient(135deg, #94a3b8, #475569); }
-.obra:nth-child(3) .lienzo { background: linear-gradient(135deg, #fde047, #f59e0b); }
-.obra:nth-child(4) .lienzo { background: linear-gradient(135deg, #e2e8f0, #94a3b8); }
-.obra:nth-child(5) .lienzo { background: linear-gradient(135deg, #1e3a8a, #7c3aed); }
-.obra:nth-child(6) .lienzo { background: linear-gradient(135deg, #f97316, #b45309); }
+.obra:nth-child(1) .lienzo {
+  background-image: url("https://elements-resized.envatousercontent.com/elements-video-cover-images/4988fd5c-9404-4d87-a651-fa9d83b1c44e/video_preview/video_preview_0000.jpg?w=500&cf_fit=cover&q=85&format=auto&s=863870b5aed39a7fd1a0c027217a33026fb4bf1d9ce44e602caa581b6105c338");
+  background-size: cover; /* Hace que la imagen cubra todo el espacio sin deformarse */
+  background-position: center; /* Centra la imagen en el recuadro */
+  /* background: linear-gradient(135deg, #f59e0b, #ef4444); */
+}
+.obra:nth-child(2) .lienzo {
+  background: linear-gradient(135deg, #94a3b8, #475569);
+}
+.obra:nth-child(3) .lienzo {
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+}
+.obra:nth-child(4) .lienzo {
+  background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+}
+.obra:nth-child(5) .lienzo {
+  background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+}
+.obra:nth-child(6) .lienzo {
+  background: linear-gradient(135deg, #f97316, #b45309);
+}
 
 .obra h2 {
   font-size: 18px;

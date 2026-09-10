@@ -40,10 +40,27 @@ body {
   border-radius: 6px;
 }
 
-.tarjeta:nth-child(1) .emoji { background: linear-gradient(135deg, #b45309, #78350f); }
-.tarjeta:nth-child(2) .emoji { background: linear-gradient(135deg, #fbbf24, #d97706); }
-.tarjeta:nth-child(3) .emoji { background: linear-gradient(135deg, #f9a8d4, #db2777); }
-.tarjeta:nth-child(4) .emoji { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+.tarjeta:nth-child(1) .emoji {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmT34oiQxJABbp1C0dr5qcxaFME-jjTEHkNDktn4mMg&s=10");
+  background-size: cover;
+  background-position: center;
+  /* background: linear-gradient(135deg, #b45309, #78350f); */
+}
+.tarjeta:nth-child(2) .emoji {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEszxSXHJa4NiwvxYfa8Opxvre-AdGb114Gk8Y-GwHFQ&s=10");
+  background-size: cover;
+  background-position: center;
+  /* background: linear-gradient(135deg, #fbbf24, #d97706); */
+}
+.tarjeta:nth-child(3) .emoji {
+  background-image: url("https://www.allrecipes.com/thmb/R4reoZMOwUpDh9SJnc5xgRYH4No=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/221142-new-york-style-cheesecake-VAT-Beauty-2x1-4d4d4be1f12b4473ae748387fff54290.jpg");
+  background-size: cover;
+  background-position: center;
+  /* background: linear-gradient(135deg, #f9a8d4, #db2777); */
+}
+.tarjeta:nth-child(4) .emoji {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+}
 
 .tarjeta {
   background-color: #ffffff;
@@ -67,7 +84,7 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — Estilos base (escritorio)
+   TODO 1 ☑️— Estilos base (escritorio)
    A .barra dale:
    - display: flex
    - justify-content: space-between
@@ -82,23 +99,63 @@ body {
    - gap: 16px
    - padding: 24px
    ============================================================ */
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #3e2b23;
+  color: #ffffff;
+}
 
+.links {
+  display: flex;
+  gap: 16px;
+}
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px;
+}
 /* ============================================================
-   TODO 2 — Tableta (hasta 900px)
+   TODO 2 ☑️— Tableta (hasta 900px)
    Con una media query, cuando la pantalla mida MÁXIMO 900px:
    @media (max-width: 900px) { ... }
    - .tarjetas  grid-template-columns: repeat(2, 1fr)
    - .hero h1  font-size: 28px
    Abrí el navegador y achicá la ventana para verlo funcionar.
    ============================================================ */
+@media (width <= 900px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+}
 
 /* ============================================================
-   TODO 3 — Celular (hasta 600px)
+   TODO 3 ☑️— Celular (hasta 600px)
    Otra media query, ahora con max-width: 600px:
    - .tarjetas  grid-template-columns: 1fr
    - .barra  flex-direction: column y gap: 8px
    - .nota  text-align: center
    ============================================================ */
+@media (width <= 600px) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .barra {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nota {
+    text-align: center;
+  }
+}
 
 /* ============================================================
     PARA PENSAR
