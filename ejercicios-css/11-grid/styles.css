@@ -7,7 +7,9 @@
    dimensiones (filas Y columnas).
 
    Teoría: sección 10 de teoria.md.
-   ============================================================ */
+   ============================================================ 
+   cuando trabajamos con flex trabajamos en una osla dimencion
+   */
 
 /* ─── Reset y base — ya está hecho, no lo modifiques ─── */
 * {
@@ -63,7 +65,7 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — La grilla
+   TODO 1 ☑️— La grilla
    A .galeria dale:
    - display: grid
    - grid-template-columns: repeat(3, 1fr)    3 columnas iguales
@@ -72,26 +74,65 @@ body {
    fr es una fracción del espacio disponible. ¿Qué pasa si
    escribís repeat(6, 1fr)?
    ============================================================ */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  /* = 1fr, 1fr, 1fr (fraccion) */
+  /* grid-template-areas:
+    "header header header"
+    "main main2 aside"
+    "footer footer footer"; */
+  gap: 16px;
+  padding: 0 24px 24px;
+}
 
 /* ============================================================
-   TODO 2 — Las tarjetas de las obras
+   TODO 2 ☑️— Las tarjetas de las obras
    A .obra dale:
    - background-color: #ffffff
    - border: 1px solid #e0d9cc
    - border-radius: 8px
    - padding: 16px
    ============================================================ */
+.obra {
+  background-color: #ffffff;
+  border: 1px solid #e0d9cc;
+  border-radius: 8px;
+  padding: 16px;
+}
 
+/* .obra:nth-child(1) {
+  grid-area: aside;
+}
+.obra:nth-child(2) {
+  grid-area: header;
+}
+
+.obra:nth-child(3),
+.obra:nth-child(5) {
+  grid-area: main;
+}
+
+.obra:nth-child(4) {
+  grid-area: footer;
+}
+
+.obra:nth-child(5) {
+  grid-area: main2;
+} */
 /* ============================================================
-   TODO 3 — La obra destacada
+   TODO 3 ☑️— La obra destacada
    A .destacada dale:
    - grid-column: span 2    ocupa el ancho de dos columnas
    Bonus: probá también grid-row: span 2 y mirá cómo se
    reacomodan las demás obras solas.
    ============================================================ */
+.destacada {
+  grid-column: span 2; /* <==> de 1 a la columna 2  = con grid-area 1 / 2 */
+}
 
 /* ============================================================
-   TODO 4 — Experimento responsive
+   TODO 4 ☑️— Experimento responsive
    Cambiá las columnas de la grilla por:
    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
    Achicá y agrandá la ventana: la grilla se adapta sola.
